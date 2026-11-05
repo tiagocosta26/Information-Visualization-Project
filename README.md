@@ -1,6 +1,6 @@
 # Delays on Lisbon's Rail Network
 
-An interactive dashboard to explore train delays in Lisbon's rail network, built with D3.js v7, plain JavaScript, HTML and CSS. It combines five idioms (bar chart, treemap, box plot, scatterplot and heatmap) in four coordinated panels: selecting something in one view filters all the others.
+Developed as an academic project that received a final grade of 19.5 out of 20, this interactive dashboard explores train delays across Lisbon's rail network. Built with D3.js v7, plain JavaScript, HTML, and CSS, it combines five visual idioms (bar chart, treemap, box plot, scatterplot, and heatmap) into four coordinated panels where selections in any view instantly filter all others.
 
 The data covers four days (16–19 September 2026): 15,433 valid observations of 1,296 trips, from 5 train types over 20 service axes.
 
@@ -143,3 +143,11 @@ assets/                 Early sketches of the scatterplot and heatmap
 ```
 
 All views share one state object (`js/dashboard.js`). When any filter changes, every view receives the new state and redraws itself, which is what keeps the views coordinated.
+
+
+| | |
+|:---:|:---:|
+| ![image1](Projeto-VI-main/Images/image1.png) | ![image2](Projeto-VI-main/Images/image2.png) | 
+| ![image3](Projeto-VI-main/Images/image3.png) | ![image4](Projeto-VI-main/Images/image4.png) |
+| ![image5](Projeto-VI-main/Images/image5.png) | ![image6](Projeto-VI-main/Images/image6.png) |
+
