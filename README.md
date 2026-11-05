@@ -145,6 +145,8 @@ assets/                 Early sketches of the scatterplot and heatmap
 All views share one state object (`js/dashboard.js`). When any filter changes, every view receives the new state and redraws itself, which is what keeps the views coordinated.
 
 
+## 📸 Dashboard Preview
+
 | | |
 |:---:|:---:|
 | ![image1](Projeto-VI-main/Images/image1.png) | ![image2](Projeto-VI-main/Images/image2.png) | 
