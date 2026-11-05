@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rail delays – Lisbon</title>
+  <script>try{var t=localStorage.getItem("projeto-vi-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="lib/d3.v7.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/tooltip.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="idioms/barchart.js"></script>
+  <script src="idioms/treemap.js"></script>
+  <script src="idioms/boxplot.js"></script>
+  <script src="idioms/heatmap.js"></script>
+  <script src="idioms/scatterplot.js"></script>
+  <script src="script.js"></script>
+</head>
+<body onload="init()">
+  <header class="topbar">
+    <div>
+      <h1>Delays on Lisbon's rail network</h1>
+    </div>
+    <div class="controls">
+      <div class="filters">
+        <div class="filter">
+          <span>Direction</span>
+          <div id="direction-filter" class="checks"></div>
+        </div>
+        <div class="filter">
+          <span>Time of day</span>
+          <div id="phase-filter" class="seg"></div>
+        </div>
+        <div class="filter">
+          <span>Data</span>
+          <div id="data-filter" class="seg"></div>
+        </div>
+        <div class="filter">
+          <span>Theme</span>
+          <div id="theme-filter" class="seg"></div>
+        </div>
+      </div>
+      <div id="active-filters" class="active"></div>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="panel" id="panel-box">
+      <h2>Delay by train type <small id="box-sub"></small></h2>
+      <div class="idiom BoxPlot"></div>
+    </section>
+
+    <section class="panel" id="panel-scatter">
+      <div class="panel-head">
+        <h2>Distance travelled and delay <small id="scatter-sub"></small></h2>
+        <div id="scatter-tools" class="scatter-tools"></div>
+      </div>
+      <div class="idiom ScatterPlot"></div>
+    </section>
+
+    <section class="panel" id="panel-bars">
+      <div class="panel-head">
+        <h2>Share of each axis in delay <small id="bar-sub"></small></h2>
+        <div id="view-switch" class="view-switch"></div>
+      </div>
+      <div class="idiom BarChart"></div>
+      <div class="idiom TreeMap"></div>
+    </section>
+
+    <section class="panel" id="panel-heatmap">
+      <h2>Mean delay by time of day and day <small id="heat-sub"></small></h2>
+      <div class="idiom HeatMap"></div>
+    </section>
+  </main>
+</body>
+</html>
